@@ -1,0 +1,65 @@
+Problem Number      :   Conceptual 7 from ITSL book
+
+Problem statement   : 
+
+The table below provides a training data set containing six observations, three predictors, 
+and one qualitative response variable.
+
+    Obs.    X1  X2  X3  Y
+    1       0   3   0   Red
+    2       2   0   0   Red
+    3       0   1   3   Red
+    4       0   1   2   Green 
+    5       −1  0   1   Green 
+    6       1   1   1   Red
+
+Suppose we wish to use this data set to make a prediction for Y when X1 = X2 = X3 = 0 using K-nearest neighbors.
+
+(a) Compute the Euclidean distance between each observation and the test point, X1 =X2 =X3 =0.
+(b) What is our prediction with K = 1? Why?
+(c) What is our prediction with K = 3? Why?
+(d) If the Bayes decision boundary in this problem is highly non-linear, 
+then would we expect the best value for K to be large or small? Why?
+
+Answer:
+a) Euclidean distance formula = sqrt()
+
+distances between test point and each observation :
+test point = t,  X1 = X2 = X3 = 0
+
+    1) observation 1 : X1 = 0, X2 = 3, X3 = 0
+    d(obs_1, t) = sqrt(0 + 9 + 0) = sqrt(9) = 3
+
+    2) observation 2 : X1 = 2, X2 = 0, X3 = 0
+    d(obs_2, t) = sqrt(4 + 0 + 0) = sqrt (4) = 2
+
+    3) observation 3: X1 = 0, X2 = 1, X3 = 3
+    d(obs_3, t) = sqrt(0 + 1 + 9) = sqrt (10)
+
+    4) observation 4: 
+    d(obs_4, t) = sqrt(0 + 1 + 4) = sqrt(5)
+
+    5) observation 5:
+    d(obs_5, t) = sqrt(1 + 0 + 1) = sqrt(2)
+
+    6) observation 6:
+    d(obs_6) = sqrt(1 + 1 + 1) = sqrt(3)
+
+
+distance table is :
+    Obs.    d(obs_i, t)     Y
+    1       3               Red
+    2       2               Red
+    3       sqrt(10)        Red
+    4       sqrt(5)         Green 
+    5       sqrt(2)         Green 
+    6       sqrt(3)         Red
+
+b) if K = 1,
+obs_5 is the nearest point from the test. So, the prediction of test point will be "Green".
+
+c) if K = 3,
+The nearest observations are obs_5, obs_6 and obs_2. Since obs_6 and obs_2 are "Red", the prediction of 
+the test point will be "Red".
+
+d) If the Bayes decision boundary is highly non-linear, the best value for K is small value since when k is small, decision boundary is more flexible.
