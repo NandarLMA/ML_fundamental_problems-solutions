@@ -1,0 +1,46 @@
+Problem Number      :   Conceptual 2 from ITSL book
+
+Problem statement   : 
+
+Explain whether each scenario is a classification or regression problem, 
+and indicate whether we are most interested in inference or prediction. Finally, provide n and p.
+
+(a) We collect a set of data on the top 500 firms in the US.
+For each firm we record profit, number of employees, industry and the CEO salary.
+We are interested in understanding which factors affect CEO salary.
+
+(b) We are considering launching a new product and wish to know whether it will be a success or a failure. 
+We collect data on 20 similar products that were previously launched. 
+For each product we have recorded whether it was a success or failure, price charged for the product, 
+marketing budget, competition price, and ten other variables.
+
+(c) We are interested in predicting the % change in the USD/Euro exchange rate in relation to the weekly changes 
+    in the world stock markets. Hence we collect weekly data for all of 2012. 
+    For each week we record the % change in the USD/Euro, the % change in the US market, 
+    the % change in the British market, and the % change in the German market.
+
+Answer : 
+
+    n is the number of observations, and p is the number of feature in each observation.
+
+    a)
+    Type of problem : regression, since we want to predict the continuous numeric data (CEO salary), not to classify data into categories.
+
+    Interest : In this probelm, we are interested in inference since we want to know the factors which affect CEO salary rather than simply prediction the salary of CEO. 
+
+    n and p : Since data is collected from the top 500 firms, n = 500 and p = 3 (profit, number of employees, industry).
+    
+    b)
+    Type of problem : classification, since we want to classify data into either "success" or "failure".
+    
+    Interest : We are primarly interested in the prediction of the product launched result whether it will succeed or fail upon launch.
+    
+    n and p : n, the number of observation, is 20 since data were collected on 20 similar products. p, the number of feature, is 13 (price changed, markeing budget, competition price and ten other variables)
+
+    c) 
+    Type of problem : regression, since we want to predict the % change in the USD/Euro rate, which is the continuous numeric data.
+
+    Interest : We are interested in the prediction rather than inference since our main gould is the predict the 
+    weekly exchange rate of USD/Euro
+
+    n and p : In this case, n, the number of observation, is the number of the weeks in year-2012, and the number of features of each observation, p, is 3 (% change in the US market, British market, and German market) 
